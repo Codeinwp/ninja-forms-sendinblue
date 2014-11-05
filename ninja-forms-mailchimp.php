@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Ninja FOrms - SendinBlue
+Plugin Name: Ninja Forms - SendinBlue
 Description: Sign users up for your SendinBlue newsletter when submitting Ninja Forms
 Version: 1.0.0
 Author: Ionut Neagu
-Author URI: https://themeisle.com
+Author URI: https://sendinblue.com
 Contributors: Ionut Neagu
 */
 
@@ -261,7 +261,7 @@ add_action( 'init', 'ninja_forms_sb_hook_into_processing' );
 
 function ninja_forms_sb_extension_setup_license() {
     if ( class_exists( 'NF_Extension_Updater' ) ) {
-        $NF_Extension_Updater = new NF_Extension_Updater( 'MailChimp', '1.0.3', 'Pippin Williamson', __FILE__, 'mailchimp' );
+        $NF_Extension_Updater = new NF_Extension_Updater( '', '1.0.3', ' ', __FILE__, '' );
     }
 }
 add_action( 'admin_init', 'ninja_forms_sb_extension_setup_license' );
