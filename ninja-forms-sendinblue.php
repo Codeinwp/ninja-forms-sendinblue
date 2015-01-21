@@ -9,7 +9,6 @@ Contributors: Ionut Neagu
 */
 
 
-
 /**
  * Plugin text domain
  *
@@ -140,7 +139,7 @@ function ninja_forms_sb_get_sendinblue_lists() {
 		if ( !class_exists( 'Mailin' ) )
 			require_once 'sendinblue/sendinblue.php';
 		$api       = new Mailin("https://api.sendinblue.com/v2.0",$options['ninja_forms_sb_api'] );
-		$list_data = $api->lists();
+		$list_data = $api->get_lists();
 		if ( $list_data ) :
 			foreach ( $list_data['data'] as $key => $list ) :
 				$lists[] = array(
@@ -174,14 +173,14 @@ function ninja_forms_sb_subscribe_email( $subscriber = array(), $list_id = '', $
 	$api = new Mailin("https://api.sendinblue.com/v2.0",$options['ninja_forms_sb_api'] );
 
 	$vars = array();
-
+	$list_id = array($list_id);
 	if ( ! empty( $subscriber['first_name'] ) )
 		$vars['FNAME'] = $subscriber['first_name'];
 
 	if ( ! empty( $subscriber['last_name'] ) )
 		$vars['SURNAME'] = $subscriber['last_name'];
-
-	if ( $api->listSubscribe( $list_id, $subscriber['email'], $vars, 'html', $double_opt ) === true ) {
+	
+	if ( $api->create_update_user( $subscriber['email'], $vars, 0, $list_id,0 ) === true ) {
 		return true;
 	}
 
@@ -234,7 +233,7 @@ function ninja_forms_sb_check_for_email_signup() {
 
 		}
 		if ( ! empty( $subscriber ) ) {
-			ninja_forms_sb_subscribe_email( $subscriber, $form['ninja_forms_sb_list'], $double_opt );
+			ninja_forms_sb_subscribe_email( $subscriber, $form['ninja_forms_sb_list']);
 		}
 	}
 }

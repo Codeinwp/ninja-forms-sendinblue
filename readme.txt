@@ -25,6 +25,3 @@ This section describes how to install the plugin.
 
 == Changelog ==
 
-= 1.0.3 (20 August 2014) =
-
-* Moved processing to the ninja_forms_post_process hook.
