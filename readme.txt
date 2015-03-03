@@ -1,5 +1,5 @@
 === Ninja Forms - SendinBlue ===
-Contributors: sendinblue
+Contributors: SendinBlue,neeraj_slit,codeinwp
 Tags: form, forms, ninja forms, mailpoet, wysija, newsletters, email
 Requires at least: 3.7
 Tested up to: 4.0
@@ -10,7 +10,7 @@ License: GPLv2 or later
 
 == Description ==
 
-This extension integrates Ninja Forms with SendinBlue by providing an option for your customers to signup for your newsletter lists while submitting a form.
+This extension integrates Ninja Forms with SendinBlue Newsletter by providing an option for your customers to signup for your newsletter lists while submitting a form.
 
 = Features =
 

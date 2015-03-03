@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Ninja Forms - SendinBlue
-Description: Sign users up for your SendinBlue newsletter when submitting Ninja Forms
+Description: Sign users up for your SendinBlue newsletter when submitting a ninja form.
 Version: 1.0.0
 Author: Ionut Neagu
 Author URI: https://sendinblue.com
